@@ -11,26 +11,27 @@ public class OperationStudy {
         }
         return result;
     }
+
     void studyArithmetic(){
         int op1 = 5;
         int op2 = 3;
-
+        int op3 =5;
         int plus = op1 + op2;
         int minus = op1 - op2;
         int multiply = op1 * op2;
         int divide = op1 / op2;
         int modulus = op1 % op2;
+        
     }
 
     void studyLogical(){
         boolean op1 = true;
         boolean op2 = false;
         boolean result;
-        result = op1 && op2;// 논리곱이라 or 보다 먼저
+        result = op1 && op2 || op1;// && 는 || 보다 우선순위가 높다
         result = op1 || op2;
 
     }
-
     public static void main(String[] args) {
         OperationStudy operationStudy = new OperationStudy();
         operationStudy.studyArithmetic();
