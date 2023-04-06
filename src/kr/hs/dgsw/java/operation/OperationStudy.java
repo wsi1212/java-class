@@ -7,9 +7,18 @@ public class OperationStudy {
 
         while (value > 0){
            result = (value %2) + result;
+           //
            value /= 2;
+
         }
         return result;
+    }
+
+    void studyNot(){
+        int value = 1;
+        int value2 = ~value;
+        System.out.println(value2);
+        System.out.println(toBinary(value));
     }
 
     void studyArithmetic(){
@@ -30,11 +39,11 @@ public class OperationStudy {
         boolean result;
         result = op1 && op2 || op1;// && 는 || 보다 우선순위가 높다
         result = op1 || op2;
-
     }
     public static void main(String[] args) {
         OperationStudy operationStudy = new OperationStudy();
         operationStudy.studyArithmetic();
+        operationStudy.studyNot();
         System.out.println(operationStudy.toBinary(8));
     }
 }
